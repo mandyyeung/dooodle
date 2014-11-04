@@ -4,3 +4,16 @@ body {
   background: #ccc;
   font-family: 'Lato', sans-serif;
 }
+
+canvas {
+  background: #fff;
+  display: block;
+  margin: 2% auto;
+  border: 5px solid #000;
+  cursor: url(../img/cursor.png), crosshair;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 5%;
+}
