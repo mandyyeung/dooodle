@@ -21,5 +21,5 @@ $canvas.mousedown(function(e){
 });
 
 $("#reset").click(function(){
-  context.clearRect(0,0, 600, 400)
+  context.clearRect(0,0, $canvas.width(), $canvas.height())
 });
