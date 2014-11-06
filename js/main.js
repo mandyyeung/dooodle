@@ -19,3 +19,7 @@ $canvas.mousedown(function(e){
 }).mouseleave(function(){
   $canvas.mouseup();
 });
+
+$("#reset").click(function(){
+  context.clearRect(0,0, 600, 400)
+});
