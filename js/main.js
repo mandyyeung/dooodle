@@ -1,3 +1,4 @@
+// Canvas drawing
 var $canvas = $("canvas");
 var context = $canvas[0].getContext("2d");
 var mouseDown = false;
@@ -20,6 +21,7 @@ $canvas.mousedown(function(e){
   $canvas.mouseup();
 });
 
+// Reset button
 $("#reset").click(function(){
   context.clearRect(0,0, $canvas.width(), $canvas.height())
 });
