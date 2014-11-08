@@ -2,6 +2,11 @@
 var $canvas = $("canvas");
 var context = $canvas[0].getContext("2d");
 var mouseDown = false;
+var color = "#000";
+
+$("ul#colorSelect li").click(function(){
+  color = $(this).css("background-color");
+});
 
 $canvas.mousedown(function(e){
   lastEvent = e;
@@ -11,7 +16,7 @@ $canvas.mousedown(function(e){
     context.beginPath();
     context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
     context.lineTo(e.offsetX, e.offsetY);
-    context.strokeStyle = "#000";
+    context.strokeStyle = color;
     context.stroke();
     lastEvent = e;
   }
@@ -23,5 +28,6 @@ $canvas.mousedown(function(e){
 
 // Reset button
 $("#reset").click(function(){
-  context.clearRect(0,0, $canvas.width(), $canvas.height())
+  context.clearRect(0,0, $canvas.width(), $canvas.height());
+  color = "#000";
 });
